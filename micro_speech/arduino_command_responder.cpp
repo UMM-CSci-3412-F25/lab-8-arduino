@@ -53,17 +53,17 @@ void RespondToCommand(tflite::ErrorReporter* error_reporter,
     // If we hear a command, light up the appropriate LED
     if (found_command[0] == 'y') {
       last_command_time = current_time;
-      digitalWrite(LEDG, LOW);  // Green for yes
+      digitalWrite(LEDR, LOW);  // Green for yes
     }
 
     if (found_command[0] == 'n') {
       last_command_time = current_time;
-      digitalWrite(LEDR, LOW);  // Red for no
+      digitalWrite(LEDB, LOW);  // Red for no
     }
 
     if (found_command[0] == 'u') {
       last_command_time = current_time;
-      digitalWrite(LEDB, LOW);  // Blue for unknown
+      digitalWrite(LEDG, LOW);  // Blue for unknown
     }
   }
 
